@@ -1,14 +1,13 @@
-import classes from "../../styles/Signup.module.css";
+import classes from "../../styles/Login.module.css";
 import Button from "../Button";
-import Checkbox from "../Checkbox";
 import Form from "../Form";
 import Illustration from "../Illustration";
 import TextInput from "../TextInput";
 
-export default function Signup() {
+export default function Login() {
   return (
     <>
-      <h1>Create an account</h1>
+      <h1>Login to your account</h1>
       <div class="column">
         <Illustration />
         <Form className={`${classes.signup}`}>
@@ -19,12 +18,6 @@ export default function Signup() {
             icon="alternate_email"
           />
           <TextInput type="password" placeholder="Enter password" icon="lock" />
-          <TextInput
-            type="password"
-            placeholder="Confirm password"
-            icon="lock_clock"
-          />
-          <Checkbox text="I agree to the Terms &amp; Conditions" />
           <Button>
             <span>Submit Now</span>
           </Button>
