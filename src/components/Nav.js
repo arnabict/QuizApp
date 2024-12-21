@@ -5,12 +5,16 @@ import Account from "./Account";
 
 export default function Nav() {
   return (
-    <nav className={classes.Nav}>
+    <nav className={classes.nav}>
       <ul>
         <li>
           <Link to="/" className={classes.brand}>
-            <img src={logo} alt="Learn with Sumit Logo" />
-            <h3>Learn with Sumit</h3>
+            <span>
+              <img src={logo} alt="Learn with Sumit Logo" />
+            </span>
+            <span>
+              <h3>Learn with Sumit</h3>
+            </span>
           </Link>
         </li>
       </ul>
