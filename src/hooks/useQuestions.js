@@ -21,7 +21,17 @@ export default function useQuestions(videoID) {
         setLoading(false);
         if (snapShot.exists()) {
           setQuestions((prevQuestions) => {
-            return [...prevQuestions, ...Object.values(snapShot.val())];
+            const newQuestions = Object.values(snapShot.val());
+            // a set to keep track of uniques questions
+            const uniqueQuestions = new Set(
+              prevQuestions.map((question) => question.index)
+            );
+            // filter out arrays with duplicate questions
+            const filteredQuestions = newQuestions.filter(
+              (question) => !uniqueQuestions.has(question.index)
+            );
+            // concatenate the unique arrays with the previous questions
+            return [...prevQuestions, ...filteredQuestions];
           });
         }
       } catch (err) {
