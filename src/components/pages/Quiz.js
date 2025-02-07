@@ -83,7 +83,7 @@ export default function Quiz() {
       [id]: qna,
     });
 
-    navigate(`/result/${id}`, { state: qna });
+    navigate(`/result/${id}`, { state: { qna } });
   }
 
   return (
