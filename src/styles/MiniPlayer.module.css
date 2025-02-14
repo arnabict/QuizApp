@@ -10,7 +10,14 @@
   border-radius: 5px;
 }
 
-.miniPlayer img {
+/* .miniPlayer img {
+  width: 300px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  animation: miniplayerAnim 0.3s ease forwards;
+} */
+
+.miniPlayer .player {
   width: 300px;
   aspect-ratio: 16 / 9;
   object-fit: cover;
